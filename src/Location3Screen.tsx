@@ -4,8 +4,7 @@ import {
   Header,
   ParentComponent,
   Illustration,
-  Container,
-  ActionButton,
+  Container
 } from "./ui";
 
 import { Row, Paragraph } from "./ui";
@@ -20,7 +19,6 @@ import {
 import { Constants } from "expo";
 import { recordScreenCallOnFocus } from "./navigation";
 
-import { LOCATION2_SCREEN } from "./screens";
 
 const Main = ({ children, style }: ParentComponent) => (
   <Container
@@ -43,7 +41,7 @@ const Main = ({ children, style }: ParentComponent) => (
 const Data = ({ children, style }: ParentComponent) => (
   <Main style={{...style}}>
     <Illustration
-      source={require("../assets/locations/1.jpeg")}
+      source={require("../assets/locations/2.jpg")}
       style={{
         width: '100%',
         height: 180 * 0.75,
@@ -59,7 +57,7 @@ const Data = ({ children, style }: ParentComponent) => (
       marginBottom: 16,
       lineHeight: 24
     }}>
-      {i18n.t("locations.1.p1")}
+      {i18n.t("locations.3.p1")}
     </Paragraph>
     <Paragraph style={{
       padding: 0,
@@ -68,7 +66,7 @@ const Data = ({ children, style }: ParentComponent) => (
       lineHeight: 24
 
     }}>
-      {i18n.t("locations.1.p2")}
+      {i18n.t("locations.3.p2")}
     </Paragraph>
     <Paragraph style={{
       padding: 0,
@@ -77,7 +75,7 @@ const Data = ({ children, style }: ParentComponent) => (
       lineHeight: 24
 
     }}>
-      {i18n.t("locations.1.p3")}
+      {i18n.t("locations.3.p3")}
     </Paragraph>
     <Paragraph style={{
       padding: 0,
@@ -86,7 +84,34 @@ const Data = ({ children, style }: ParentComponent) => (
       lineHeight: 24
 
     }}>
-      {i18n.t("locations.1.p4")}
+      {i18n.t("locations.3.p4")}
+    </Paragraph>
+    <Paragraph style={{
+      padding: 0,
+      marginTop: 16,
+      marginBottom: 16,
+      lineHeight: 24
+
+    }}>
+      {i18n.t("locations.3.p5")}
+    </Paragraph>
+    <Paragraph style={{
+      padding: 0,
+      marginTop: 16,
+      marginBottom: 16,
+      lineHeight: 24
+
+    }}>
+      {i18n.t("locations.3.p6")}
+    </Paragraph>
+    <Paragraph style={{
+      padding: 0,
+      marginTop: 16,
+      marginBottom: 16,
+      lineHeight: 24
+
+    }}>
+      {i18n.t("locations.3.p7")}
     </Paragraph>
   </Main>
 )
@@ -97,18 +122,15 @@ interface ScreenProps {
   navigation: NavigationScreenProp<NavigationState, NavigationAction>;
 }
 
-export default class Location1Screen extends React.Component<ScreenProps> {
+export default class Location2Screen extends React.Component<ScreenProps> {
   static navigationOptions = {
     header: null,
   };
 
   constructor(props) {
     super(props);
-    recordScreenCallOnFocus(this.props.navigation, "intro");
-  }
 
-  nextScreen = () => {
-    this.props.navigation.push(LOCATION2_SCREEN);
+    recordScreenCallOnFocus(this.props.navigation, "intro");
   }
 
   render() {
@@ -125,20 +147,12 @@ export default class Location1Screen extends React.Component<ScreenProps> {
           <Container>
             <StatusBar barStyle="dark-content" />
             <Row>
-              <Header style={{marginBottom: 0, paddingBottom: 0}} allowFontScaling={false}>{i18n.t("locations.1.title")}</Header>
+              <Header style={{marginBottom: 0, paddingBottom: 0}} allowFontScaling={false}>{i18n.t("locations.3.title")}</Header>
             </Row>
             <Row>
-            <Data/>
+              <Data style={{paddingBottom: 48}}/>
             </Row>
-            <Row style={{paddingBottom: 48}}>
-            <ActionButton
-              title={i18n.t("locations.1.button")}
-              disabled={false}
-              fillColor={theme.blue}
-              width={150}
-              onPress={this.nextScreen}
-              />
-            </Row>
+
           </Container>
         </ScrollView>
       </View>
