@@ -8,11 +8,11 @@
     "version": "1.10.1",
     "orientation": "portrait",
     "githubUrl": "https://github.com/Flaque/quirk",
-    "primaryColor": "#F8A5C2",
+    "primaryColor": "#EAD2AC",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#F8A5C2"
+      "backgroundColor": "#D1DEDE"
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {

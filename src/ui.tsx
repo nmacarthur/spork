@@ -42,7 +42,7 @@ Row.propTypes = {
 export const FormContainer = ({ children, ...style }) => (
   <View
     style={{
-      marginBottom: 24,
+      marginBottom: 36,
       ...style,
     }}
   >
@@ -63,9 +63,9 @@ export const Header = ({
   <Text
     style={{
       fontWeight: "900",
-      fontSize: 48,
+      fontSize: 36,
       color: theme.darkText,
-      marginBottom: 12,
+      marginBottom: 4,
       ...style,
     }}
     textBreakStrategy={"simple"}
@@ -350,7 +350,7 @@ export const Container = ({ children, style }: ParentComponent) => (
       justifyContent: "flex-start",
       paddingLeft: 24,
       paddingRight: 24,
-      paddingBottom: 50,
+      paddingBottom: 8,
       ...style,
     }}
   >

@@ -8,7 +8,7 @@ import {
 
 import { recordScreenCallOnFocus } from "./navigation";
 
-import { LOCATION3_SCREEN } from "./screens";
+import { LOCATION6_SCREEN } from "./screens";
 
 import { Location } from './Location';
 
@@ -17,7 +17,7 @@ interface ScreenProps {
   navigation: NavigationScreenProp<NavigationState, NavigationAction>;
 }
 
-export default class Location2Screen extends React.Component<ScreenProps> {
+export default class Location5Screen extends React.Component<ScreenProps> {
   static navigationOptions = {
     header: null,
   };
@@ -28,12 +28,12 @@ export default class Location2Screen extends React.Component<ScreenProps> {
   }
 
   nextScreen = () => {
-    this.props.navigation.push(LOCATION3_SCREEN);
+    this.props.navigation.push(LOCATION6_SCREEN);
   }
 
   render() {
     return (
-      <Location location={2} source={require("../assets/locations/2.jpg")} nextScreen={this.nextScreen}></Location>
+      <Location location={5} source={require("../assets/locations/5.jpg")} nextScreen={this.nextScreen}></Location>
     );
   }
 }

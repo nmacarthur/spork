@@ -39,7 +39,7 @@ const CBTViewer = ({ thought, onEdit, onNew }) => {
       <Row>
         <ActionButton
           fillColor="transparent"
-          textColor={theme.blue}
+          textColor={theme.primary}
           title={i18n.t("cbt_form.edit")}
           onPress={() => onEdit(thought.uuid)}
           disabled={false}
