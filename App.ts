@@ -7,8 +7,8 @@ import {
   LOCATION3_SCREEN,
   LOCATION4_SCREEN,
   LOCATION5_SCREEN,
-  LOCATION6_SCREEN
-
+  LOCATION6_SCREEN,
+  CAMERA_SCREEN
 } from "./src/screens";
 
 import HomeScreen from './src/HomeScreen';
@@ -19,9 +19,8 @@ import Location4Screen from './src/Location4Screen';
 import Location5Screen from './src/Location5Screen';
 import Location6Screen from './src/Location6Screen';
 
-
-
 import withErrorBoundary from "./src/withErrorBoundary";
+import CameraComponent from './src/CameraComponent';
 
 const AppNavigator = createStackNavigator(
   {
@@ -32,7 +31,7 @@ const AppNavigator = createStackNavigator(
     [LOCATION4_SCREEN]: Location4Screen,
     [LOCATION5_SCREEN]: Location5Screen,
     [LOCATION6_SCREEN]: Location6Screen,
-
+    [CAMERA_SCREEN]: CameraComponent
   },
   {
     initialRouteName: HOME_SCREEN  }

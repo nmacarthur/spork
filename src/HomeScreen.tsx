@@ -21,7 +21,14 @@ import {
 import { Constants } from "expo";
 import { recordScreenCallOnFocus } from "./navigation";
 
-import { LOCATION1_SCREEN, LOCATION2_SCREEN, LOCATION3_SCREEN, LOCATION4_SCREEN } from "./screens";
+import {
+  LOCATION1_SCREEN,
+  LOCATION2_SCREEN,
+  LOCATION3_SCREEN,
+  LOCATION4_SCREEN,
+  LOCATION5_SCREEN,
+  LOCATION6_SCREEN
+} from "./screens";
 
 const Main = ({ children, style }: ParentComponent) => (
   <Container
@@ -114,17 +121,17 @@ export default class HomeScreen extends React.Component<ScreenProps> {
               </LocationBox>
             </Row>
             <Row style={{paddingBottom: 8, paddingTop: 8}}>
-              <LocationBox style={{width: '100%'}} source={require('../assets/locations/4.jpg')} onPress={this.NavigateTo} navigateTo={LOCATION1_SCREEN}>
+              <LocationBox style={{width: '100%'}} source={require('../assets/locations/4.jpg')} onPress={this.NavigateTo} navigateTo={LOCATION4_SCREEN}>
                 <Paragraph style={{color: '#fff', fontSize: 30, fontWeight: 'bold', padding: 12 }}>{i18n.t("locations.4.title")}</Paragraph>
               </LocationBox>
             </Row>
             <Row style={{paddingBottom: 8, paddingTop: 8}}>
-              <LocationBox style={{width: '100%'}} source={require('../assets/locations/5.jpg')} onPress={this.NavigateTo} navigateTo={LOCATION1_SCREEN}>
+              <LocationBox style={{width: '100%'}} source={require('../assets/locations/5.jpg')} onPress={this.NavigateTo} navigateTo={LOCATION5_SCREEN}>
                 <Paragraph style={{color: '#fff', fontSize: 30, fontWeight: 'bold', padding: 12 }}>{i18n.t("locations.5.title")}</Paragraph>
               </LocationBox>
             </Row>
             <Row style={{paddingBottom: 8, paddingTop: 8, marginBottom: 32}}>
-              <LocationBox style={{width: '100%'}} source={require('../assets/locations/6.jpg')} onPress={this.NavigateTo} navigateTo={LOCATION1_SCREEN}>
+              <LocationBox style={{width: '100%'}} source={require('../assets/locations/6.jpg')} onPress={this.NavigateTo} navigateTo={LOCATION6_SCREEN}>
                 <Paragraph style={{color: '#fff', fontSize: 30, fontWeight: 'bold', padding: 12 }}>{i18n.t("locations.6.title")}</Paragraph>
               </LocationBox>
             </Row>
