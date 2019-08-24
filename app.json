@@ -18,7 +18,7 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "nmacarthur.spork",
-      "icon": "./assets/ios.jpg"
+      "icon": "./assets/ios.png"
     },
     "android": {
       "package": "nmacarthur.spork",

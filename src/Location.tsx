@@ -89,18 +89,19 @@ render() {
         (<Container>
         <Row>
         <View style={{
-            flex: 1,
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'stretch',
-            width: '100%'
+            width: '100%',
+            marginTop: 32
             }}>
            <Illustration
                 source={{uri: this.state.photo}}
                 style={{
                     height: 280,
                     width: '100%',
-                    alignSelf: "center"
+                    alignSelf: "center",
+                    borderRadius: 8
                 }}
                 />
             </View>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, TouchableOpacity, CameraRoll } from 'react-native';
 import { Camera, Permissions, ImageManipulator } from 'expo';
+import { Ionicons } from '@expo/vector-icons';
 
 export default class CameraComponent extends React.Component {
 
@@ -59,11 +60,13 @@ export default class CameraComponent extends React.Component {
                     style={{
                     flex: 1,
                     backgroundColor: 'transparent',
-                    flexDirection: 'row',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'space-between'
                     }}>
                     <TouchableOpacity
                     style={{
-                        flex: 0.1,
+                        flex: 0.2,
                         alignSelf: 'flex-end',
                         alignItems: 'center',
                     }}
@@ -74,22 +77,18 @@ export default class CameraComponent extends React.Component {
                             : Camera.Constants.Type.back,
                         });
                     }}>
-                    <Text
-                        style={{ fontSize: 18, marginBottom: 10, color: 'white' }}>
-                        {' '}Flip{' '}
-                    </Text>
+                    <Ionicons name={"ios-reverse-camera"} size={40} color={"white"} style={{margin: 16}} />
                     </TouchableOpacity>
                     <TouchableOpacity
                     style={{
                         flex: 0.1,
                         alignSelf: 'center',
                         alignItems: 'center',
+                        justifyContent: 'flex-end'
                     }}
                     onPress={this.snapPhoto.bind(this)}>
-                    <Text
-                        style={{ fontSize: 18, marginBottom: 10, color: 'white' }}>
-                        {' '}photo{' '}
-                    </Text>
+                    <View style={{ width: 60, height: 60, borderColor: '#fff', borderWidth: 5, borderRadius: 200, marginBottom: 10, color: 'white' }}>
+                    </View>
                     </TouchableOpacity>
                 </View>
                 </Camera>
