@@ -14,7 +14,7 @@
     "@types/expo": "^32.0.10",
     "@types/react-navigation": "^3.0.1",
     "eslint-plugin-react-native-a11y": "^1.2.0",
-    "expo": "^31.0.6",
+    "expo": "^46.0.16",
     "i18n-js": "^3.2.1",
     "jest": "^24.7.1",
     "jest-expo": "^32.0.0",
